@@ -161,7 +161,12 @@ const Destinations = () => {
                 <h4 className="font-bold text-lg mb-1">Plan a Trip</h4>
                 <p className="text-white/90">Create your perfect itinerary</p>
               </div>
-              <Button variant="ghost" size="sm" className="text-white hover:bg-white/20">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="text-white hover:bg-white/20"
+                onClick={() => navigate("/plan-trip")}
+              >
                 Start Planning
               </Button>
             </div>
