@@ -8,16 +8,16 @@ import { Search, MapPin, Star, Plane, ArrowRight } from "lucide-react";
 import destinationsImage from "@/assets/destinations-grid.jpg";
 
 const popularDestinations = [
-  { name: "Bali, Indonesia", type: "Tropical Paradise", rating: 4.9, price: "From $89/day" },
-  { name: "Paris, France", type: "Cultural Heritage", rating: 4.8, price: "From $120/day" },
-  { name: "Tokyo, Japan", type: "Modern Adventure", rating: 4.9, price: "From $95/day" },
-  { name: "Santorini, Greece", type: "Island Escape", rating: 4.7, price: "From $110/day" },
-  { name: "New York, USA", type: "Urban Explorer", rating: 4.6, price: "From $130/day" },
-  { name: "Dubai, UAE", type: "Luxury Experience", rating: 4.8, price: "From $140/day" },
+  { name: "Goa", type: "Beach Paradise", rating: 4.8, price: "From ₹3,500/day" },
+  { name: "Kerala Backwaters", type: "Nature Retreat", rating: 4.9, price: "From ₹4,000/day" },
+  { name: "Rajasthan", type: "Royal Heritage", rating: 4.7, price: "From ₹4,500/day" },
+  { name: "Himachal Pradesh", type: "Mountain Adventure", rating: 4.8, price: "From ₹3,000/day" },
+  { name: "Mumbai", type: "Urban Explorer", rating: 4.6, price: "From ₹5,000/day" },
+  { name: "Andaman Islands", type: "Island Escape", rating: 4.9, price: "From ₹6,000/day" },
 ];
 
 const travelTypes = [
-  "Adventure", "Beach", "Cultural", "Urban", "Nature", "Luxury"
+  "Adventure", "Beach", "Heritage", "Hill Station", "Wildlife", "Spiritual"
 ];
 
 const Destinations = () => {
@@ -46,8 +46,8 @@ const Destinations = () => {
           </div>
 
           <div className="text-center mb-8">
-            <h2 className="text-4xl font-bold mb-2">Where to next?</h2>
-            <p className="text-white/90 text-lg">Discover amazing destinations around the world</p>
+            <h2 className="text-4xl font-bold mb-2">Explore Incredible India</h2>
+            <p className="text-white/90 text-lg">Discover amazing destinations across India</p>
           </div>
 
           {/* Search Bar */}
@@ -55,7 +55,7 @@ const Destinations = () => {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
               type="text"
-              placeholder="Search destinations, countries, or cities..."
+              placeholder="Search destinations, states, or cities in India..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-12 h-14 text-lg bg-white/95 backdrop-blur-sm border-0 shadow-soft"
@@ -98,8 +98,8 @@ const Destinations = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-transparent to-black/60" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center text-white">
-                <h3 className="text-3xl font-bold mb-2">Explore the World</h3>
-                <p className="text-white/90">Top destinations waiting for you</p>
+                <h3 className="text-3xl font-bold mb-2">Discover India</h3>
+                <p className="text-white/90">Incredible destinations across the country</p>
               </div>
             </div>
           </div>
@@ -108,7 +108,7 @@ const Destinations = () => {
         {/* Popular Destinations */}
         <div className="mb-8">
           <div className="flex items-center justify-between mb-6">
-            <h3 className="text-2xl font-bold">Popular Destinations</h3>
+            <h3 className="text-2xl font-bold">Popular Indian Destinations</h3>
             <Button variant="ghost" size="sm">
               View All <ArrowRight className="w-4 h-4 ml-1" />
             </Button>
@@ -178,8 +178,8 @@ const Destinations = () => {
                 <MapPin className="w-6 h-6" />
               </div>
               <div className="flex-1">
-                <h4 className="font-bold text-lg mb-1">Travel Guides</h4>
-                <p className="text-white/90">Expert tips and recommendations</p>
+                <h4 className="font-bold text-lg mb-1">India Travel Guides</h4>
+                <p className="text-white/90">Local insights and recommendations</p>
               </div>
               <Button 
                 variant="ghost" 
