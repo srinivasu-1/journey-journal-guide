@@ -24,62 +24,85 @@ const guideCategories = [
   { id: "destinations", label: "Destinations", icon: MapPin },
   { id: "food", label: "Food & Dining", icon: Utensils },
   { id: "photography", label: "Photography", icon: Camera },
-  { id: "culture", label: "Culture", icon: BookOpen },
+  { id: "culture", label: "Heritage & Culture", icon: BookOpen },
 ];
 
 const featuredGuides = [
   {
     id: 1,
-    title: "Ultimate Bali Travel Guide",
-    author: "Sarah Chen",
+    title: "Complete Kerala Backwaters Guide",
+    author: "Priya Sharma",
     rating: 4.9,
     reviews: 1234,
     readTime: "12 min",
     category: "destinations",
-    description: "Everything you need to know about exploring the Island of Gods",
-    tags: ["Beaches", "Temples", "Culture", "Food"]
+    description: "Experience the serene beauty of Kerala's famous backwaters",
+    tags: ["Houseboats", "Nature", "Ayurveda", "Coconut Groves"]
   },
   {
     id: 2,
-    title: "Japanese Street Food Adventures",
-    author: "Hiroshi Tanaka",
+    title: "Indian Street Food Adventures",
+    author: "Rajesh Kumar",
     rating: 4.8,
     reviews: 892,
     readTime: "8 min",
     category: "food",
-    description: "Discover the best street food scenes across Japan",
-    tags: ["Ramen", "Sushi", "Markets", "Local"]
+    description: "Discover the best street food across Indian cities",
+    tags: ["Chaat", "Dosa", "Local Markets", "Spices"]
   },
   {
     id: 3,
-    title: "Photography Tips for European Cities",
-    author: "Emma Rodriguez",
+    title: "Photography Guide to Rajasthan",
+    author: "Meera Patel",
     rating: 4.7,
     reviews: 567,
     readTime: "15 min",
     category: "photography",
-    description: "Capture stunning shots of Europe's most beautiful cities",
-    tags: ["Architecture", "Golden Hour", "Street", "Landscape"]
+    description: "Capture the royal heritage and vibrant culture of Rajasthan",
+    tags: ["Palaces", "Desert", "Folk Culture", "Architecture"]
   },
   {
     id: 4,
-    title: "Cultural Etiquette Around the World",
-    author: "Alex Thompson",
+    title: "Indian Cultural Traditions Guide",
+    author: "Arjun Singh",
     rating: 4.9,
     reviews: 743,
     readTime: "10 min",
     category: "culture",
-    description: "Navigate cultural differences with confidence",
-    tags: ["Respect", "Customs", "Language", "Traditions"]
+    description: "Understanding India's rich cultural diversity and traditions",
+    tags: ["Festivals", "Customs", "Art Forms", "Spirituality"]
+  },
+  {
+    id: 5,
+    title: "Goa Beach Paradise Guide",
+    author: "Maria D'Souza",
+    rating: 4.8,
+    reviews: 456,
+    readTime: "9 min",
+    category: "destinations",
+    description: "Complete guide to Goa's beaches, culture, and nightlife",
+    tags: ["Beaches", "Portuguese Heritage", "Seafood", "Parties"]
+  },
+  {
+    id: 6,
+    title: "Authentic Indian Cuisine Trail",
+    author: "Chef Vikram",
+    rating: 4.9,
+    reviews: 678,
+    readTime: "11 min",
+    category: "food",
+    description: "Journey through India's diverse culinary landscape",
+    tags: ["Regional Cuisine", "Spices", "Traditional Recipes", "Food Culture"]
   }
 ];
 
 const trendingGuides = [
-  "Solo Travel Safety Tips",
-  "Budget Travel Hacks",
-  "Sustainable Tourism Guide",
-  "Digital Nomad Essentials",
-  "Family Travel Planning"
+  "Monsoon Travel in India",
+  "Budget Travel in India",
+  "Solo Female Travel Safety",
+  "Temple Hopping Guide",
+  "Hill Station Escapes",
+  "Indian Railway Travel Tips"
 ];
 
 const Guides = () => {
@@ -114,8 +137,8 @@ const Guides = () => {
           </div>
 
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-2">Expert Travel Guides</h2>
-            <p className="text-white/90">Discover insider tips from experienced travelers</p>
+            <h2 className="text-3xl font-bold mb-2">India Travel Guides</h2>
+            <p className="text-white/90">Discover insider tips for exploring incredible India</p>
           </div>
 
           {/* Search Bar */}
@@ -123,7 +146,7 @@ const Guides = () => {
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
             <Input
               type="text"
-              placeholder="Search guides, destinations, tips..."
+              placeholder="Search Indian destinations, tips, culture..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="pl-12 h-12 bg-white/95 backdrop-blur-sm border-0 shadow-soft"
@@ -180,7 +203,7 @@ const Guides = () => {
             <Users className="w-12 h-12 mx-auto mb-4 text-white" />
             <h3 className="text-2xl font-bold mb-2">Join Our Travel Community</h3>
             <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-              Share your experiences, get expert advice, and connect with fellow travelers from around the world.
+              Share your Indian travel experiences, get local insights, and connect with fellow India explorers.
             </p>
             <div className="flex gap-4 justify-center">
               <Button variant="secondary" size="lg">
