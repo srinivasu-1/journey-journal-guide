@@ -164,7 +164,7 @@ const Destinations = () => {
         </div>
 
         {/* Quick Actions */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           <Card className="p-6 bg-gradient-sunset text-white border-0">
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
@@ -201,6 +201,26 @@ const Destinations = () => {
                 onClick={() => navigate("/guides")}
               >
                 Explore Guides
+              </Button>
+            </div>
+          </Card>
+
+          <Card className="p-6 bg-gradient-ocean text-white border-0">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                <Search className="w-6 h-6" />
+              </div>
+              <div className="flex-1">
+                <h4 className="font-bold text-lg mb-1">Navigation & Routes</h4>
+                <p className="text-white/90">Best routes and directions</p>
+              </div>
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className="text-white hover:bg-white/20"
+                onClick={() => navigate("/navigation")}
+              >
+                Navigate
               </Button>
             </div>
           </Card>
