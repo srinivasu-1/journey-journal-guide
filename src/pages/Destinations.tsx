@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Search, MapPin, Star, Plane, ArrowRight } from "lucide-react";
+import { Search, MapPin, Star, Plane, ArrowRight, X } from "lucide-react";
 import destinationsImage from "@/assets/destinations-grid.jpg";
 
 const popularDestinations = [
@@ -50,16 +50,29 @@ const Destinations = () => {
             <p className="text-white/90 text-lg">Discover amazing destinations across India</p>
           </div>
 
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-            <Input
-              type="text"
-              placeholder="Search destinations, states, or cities in India..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-12 h-14 text-lg bg-white/95 backdrop-blur-sm border-0 shadow-soft"
-            />
+          {/* Enhanced Search Bar */}
+          <div className="max-w-2xl mx-auto relative group">
+            <div className="absolute inset-0 bg-gradient-primary opacity-20 rounded-2xl blur-xl group-hover:opacity-30 transition-opacity duration-300"></div>
+            <div className="relative bg-white/95 backdrop-blur-sm rounded-2xl border border-white/20 shadow-elegant hover:shadow-glow transition-all duration-300">
+              <Search className="absolute left-6 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5 group-hover:text-primary transition-colors duration-200" />
+              <Input
+                type="text"
+                placeholder="Search destinations, states, or cities in India..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="pl-16 pr-16 h-16 text-lg bg-transparent border-0 focus:ring-2 focus:ring-primary/20 rounded-2xl placeholder:text-muted-foreground/70 hover:placeholder:text-muted-foreground transition-all duration-200"
+              />
+              {searchQuery && (
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 h-10 w-10 p-0 hover:bg-primary/10 transition-all duration-200"
+                  onClick={() => setSearchQuery("")}
+                >
+                  <X className="w-4 h-4" />
+                </Button>
+              )}
+            </div>
           </div>
         </div>
       </div>
